@@ -1,5 +1,5 @@
 # vars
-export PORT=9901
+export PORT=8888
 export DIR_BASE=~/
 
 # static vars
@@ -9,7 +9,6 @@ init:
 	@make b
 	@echo alias jn='"docker run -it --rm -v $(DIR_BASE):/work/ -p $(PORT):$(PORT) $(TAG) notebook --port $(PORT) --ip=0.0.0.0 --allow-root"' >> ~/.bashrc
 	@echo alias jl='"docker run -it --rm -v $(DIR_BASE):/work/ -p $(PORT):$(PORT) $(TAG) lab --port $(PORT) --ip=0.0.0.0 --allow-root"' >> ~/.bashrc
-	@exec bash -l
 
 # --------------------------------------------------------	
 # build & run
